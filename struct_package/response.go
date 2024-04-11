@@ -2,8 +2,9 @@ package struct_package
 
 import (
 	"encoding/json"
-	"nam_tourism_web_server/type_package"
 	"net/http"
+
+	"github.com/javodmutalliboev/go_toolkit/type_package"
 )
 
 type Response struct {
