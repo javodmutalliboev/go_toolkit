@@ -15,7 +15,7 @@ func AdminAuth() type_package.Middleware {
 	return func(f http.HandlerFunc) http.HandlerFunc {
 		return func(w http.ResponseWriter, r *http.Request) {
 			var res interface_package.Response = &struct_package.Response{}
-			session, err := session.GetSession(r, "admin_session")
+			session, err := session.GetSession(r, "session")
 			if err != nil {
 				log.Printf("%s: %s", r.URL.Path, err.Error())
 				res = &struct_package.Response{
