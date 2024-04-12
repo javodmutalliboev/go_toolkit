@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/javodmutalliboev/go_toolkit/admin"
 	"github.com/javodmutalliboev/go_toolkit/environment"
+	"github.com/javodmutalliboev/go_toolkit/session"
 )
 
 func init() {
@@ -10,5 +10,6 @@ func init() {
 }
 
 func main() {
-	admin.CreateAdmin()
+	// admin.CreateAdmin()
+	session.GetSession2()
 }
