@@ -80,7 +80,7 @@ func Login() http.HandlerFunc {
 			MaxAge:   60 * 60 * 24,
 			HttpOnly: true,
 			Secure:   true,
-			SameSite: http.SameSiteNoneMode,
+			// SameSite: http.SameSiteNoneMode,
 		}
 		session.Values["authenticated"] = true
 		session.Save(r, w)
