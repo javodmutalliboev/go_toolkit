@@ -15,7 +15,7 @@ func init() {
 
 func Export() {
 	// Open the xlsx file
-	xlFile, err := tealeg_xlsx.OpenFile("namangan-travel(1).xlsx")
+	xlFile, err := tealeg_xlsx.OpenFile("namangan-travel.xlsx")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -44,7 +44,7 @@ func Export() {
 				continue
 			}
 
-			if i == 7 {
+			if i == 50 {
 				break
 			}
 
@@ -66,10 +66,10 @@ func Export() {
 						case 6:
 							event.Photos = append(event.Photos, struct_package.EventPhoto{File: []byte(cell.Value)})
 					*/
-				case 7:
+				case 3:
 					video := cell.String()
 					event.Video = &video
-				case 8:
+				case 4:
 					mapData := cell.String()
 					event.Map = &mapData
 				}
