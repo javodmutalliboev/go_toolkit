@@ -10,5 +10,6 @@ require (
 
 require (
 	github.com/gorilla/securecookie v1.1.2 // indirect
+	github.com/tealeg/xlsx v1.0.5
 	golang.org/x/crypto v0.22.0
 )
