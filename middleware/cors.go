@@ -7,7 +7,7 @@ import (
 )
 
 func Cors(next http.Handler) http.Handler {
-	allowedOrigins := []string{os.Getenv("ADMIN_ORIGIN_LOCAL"), os.Getenv("ADMIN_ORIGIN_REMOTE")} // replace with your allowed origins
+	allowedOrigins := []string{os.Getenv("ADMIN_ORIGIN_LOCAL"), os.Getenv("ADMIN_ORIGIN_REMOTE"), os.Getenv("CLIENT_ORIGIN_REMOTE")} // replace with your allowed origins
 
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// Get the Origin header from the request
